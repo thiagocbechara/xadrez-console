@@ -9,8 +9,10 @@ namespace Xadrez
         static void Main(string[] args)
         {
             var pecas = FabricaPecas.GerarPecasIniciais();
-            var tabuleiro = new Tabuleiro(pecas);
-            tabuleiro.Desenhar();
+
+            var partida = new Partida();
+            partida.Tabuleiro = new Tabuleiro(pecas);
+            partida.Iniciar();
         }
     }
 }
